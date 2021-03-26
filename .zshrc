@@ -3,6 +3,13 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Load the shell dotfiles and .extra file:
+# * ~/.extra can be used for other settings you don’t want to commit.
+for file in ~/.{exports,extra}; do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
+
 # Oh My Zsh Theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
@@ -17,10 +24,3 @@ plugins=(
 
 # Oh My Zsh
 source $HOME/.default-oh-my-zsh
-
-# Load the shell dotfiles and .extra file:
-# * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{exports,extra}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
