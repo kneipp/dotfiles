@@ -9,6 +9,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Oh My Zsh Plugins
 plugins=(
   git
+  zsh-autosuggestions
   history-substring-search
   zsh-syntax-highlighting
 )
