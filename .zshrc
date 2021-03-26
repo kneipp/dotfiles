@@ -20,7 +20,7 @@ source $HOME/.default-oh-my-zsh
 
 # Load the shell dotfiles and .extra file:
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{exports,extra,nvmfile}; do
+for file in ~/.{exports,extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
