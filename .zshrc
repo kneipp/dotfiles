@@ -10,6 +10,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
   git
   zsh-autosuggestions
+  zsh-nvm
   history-substring-search
   zsh-syntax-highlighting
 )
