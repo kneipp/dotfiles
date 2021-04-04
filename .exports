@@ -13,3 +13,6 @@ export LIBGL_ALWAYS_INDIRECT=1
 
 # Enable nvm completion
 export NVM_COMPLETION=true
+
+# Add composer binaries to PATH
+export PATH=$HOME/.config/composer/vendor/bin:$PATH
